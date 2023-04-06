@@ -102,7 +102,30 @@ const Componente3= (): JSX.Element => {
     // FUNZIONE INVIA ORDINE
     function inviaOrdine(event: React.MouseEvent<HTMLButtonElement>){
         event.preventDefault();
-        // console.log(carrello);
+        console.log(carrello);
+
+        for(let i=0; i<carrello.length; i++){
+            
+                    axios.put(API_CARRELLO+"/"+i, {
+                        data:carrello[i],
+                        headers:{
+                            Authorization: "Bearer "+token[0]
+                        }
+                    })
+                        .then(r => console.log(r.data))
+                        .catch(err => console.log(err))
+            
+                    //   async function getDati() {
+                    //       try {              
+                    //           const response = await axios.get(API_PRODOTTI);                
+                    //           setJson(response.data);                
+                    //       } catch (error) {
+                    //           if (error instanceof Error)
+                    //               console.error(error);
+                    //       }
+                    //   }
+                    //   getDati()
+        }
   
         // axios.put(API_CARRELLO, carrello,{
         //     headers:{
