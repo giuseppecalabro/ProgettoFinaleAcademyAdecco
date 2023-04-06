@@ -14,7 +14,7 @@ import Componente3 from "../Componente3/Componente3";
 function MainNavigationRouter() {
 
     return (
-        <MemoryRouter>
+        <BrowserRouter>
             <div>
                 <h1>Prova Finale</h1>
                 <ul className="header">
@@ -30,7 +30,7 @@ function MainNavigationRouter() {
                     </Routes>
                 </div>
             </div>
-        </MemoryRouter>
+        </BrowserRouter>
     );
 }
 
