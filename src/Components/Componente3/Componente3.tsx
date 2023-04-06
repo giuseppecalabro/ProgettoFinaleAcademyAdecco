@@ -104,16 +104,16 @@ const Componente3= (): JSX.Element => {
         event.preventDefault();
         console.log(carrello);
 
-        for(let i=0; i<carrello.length; i++){
+        // for(let i=0; i<carrello.length; i++){
             
-                    axios.put(API_CARRELLO+"/"+i, {
-                        data:carrello[i],
-                        headers:{
-                            Authorization: "Bearer "+token[0]
-                        }
-                    })
-                        .then(r => console.log(r.data))
-                        .catch(err => console.log(err))
+                    // axios.put(API_CARRELLO+"/"+i, {
+                    //     data:carrello[i],
+                    //     headers:{
+                    //         Authorization: "Bearer "+token[0]
+                    //     }
+                    // })
+                    //     .then(r => console.log(r.data))
+                    //     .catch(err => console.log(err))
             
                     //   async function getDati() {
                     //       try {              
@@ -125,7 +125,7 @@ const Componente3= (): JSX.Element => {
                     //       }
                     //   }
                     //   getDati()
-        }
+        // }
   
         // axios.put(API_CARRELLO, carrello,{
         //     headers:{
